@@ -5,7 +5,7 @@ import "./sass/main.sass";
 const testFunc = document.querySelector("#testFunc");
 
 testFunc.addEventListener("click", function() {
-  alert(`sum-work === ${sum(2, 2)}`);
+  alert(`sum-work === ${sum(2, 8)}`);
 });
 
 console.log(sum(2, 2));
