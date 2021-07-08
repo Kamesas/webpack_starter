@@ -83,9 +83,14 @@ module.exports = {
       filename: `${PATHS.assets}css/[name].css`
     }),
     new HtmlWebpackPlugin({
-      hash: false,
+      // hash: false,
       template: `${PATHS.src}/index.html`,
-      filename: "./index.html"
+      filename: "index.html"
+    }),
+    new HtmlWebpackPlugin({
+      // hash: false,
+      template: `${PATHS.src}/login.html`,
+      filename: "login.html"
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },

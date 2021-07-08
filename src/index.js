@@ -1,6 +1,6 @@
 import { sum } from "./js/functions";
 import "./css/main.css";
-import "./sass/main.sass";
+import "./sass/main.scss";
 
 const testFunc = document.querySelector("#testFunc");
 
