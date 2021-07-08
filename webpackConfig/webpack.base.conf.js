@@ -15,7 +15,9 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    app: PATHS.src
+    app: PATHS.src,
+    main: PATHS.src + '/js/main/main.js',
+    login: PATHS.src + '/js/login/login.js',
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
@@ -85,12 +87,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       // hash: false,
       template: `${PATHS.src}/index.html`,
-      filename: "index.html"
+      filename: "index.html",
+      chunks: ['app', 'main'],
+      excludeChunks: ['login'],
     }),
     new HtmlWebpackPlugin({
       // hash: false,
       template: `${PATHS.src}/login.html`,
-      filename: "login.html"
+      filename: "login.html",
+      chunks: ['app', 'login'],
+      excludeChunks: [ 'main' ],
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
