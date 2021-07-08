@@ -98,6 +98,20 @@ module.exports = {
       chunks: ['app', 'login'],
       excludeChunks: [ 'main' ],
     }),
+    new HtmlWebpackPlugin({
+      // hash: false,
+      template: `${PATHS.src}/posts.html`,
+      filename: "posts.html",
+      // chunks: ['app', 'login'],
+      excludeChunks: [ 'main', 'login' ],
+    }),
+    new HtmlWebpackPlugin({
+      // hash: false,
+      template: `${PATHS.src}/post.html`,
+      filename: "post.html",
+      // chunks: ['app', 'login'],
+      excludeChunks: [ 'main', 'login' ],
+    }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/static`, to: "" }
