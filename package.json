@@ -1,7 +1,7 @@
 {
-  "name": "suyan-webpack",
+  "name": "kamesas",
   "version": "1.0.0",
-  "description": "本课程来自公众号素燕，第 9 阶段系统学习 webpack",
+  "description": "webpack",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js"
@@ -9,7 +9,7 @@
   "keywords": [
     "webpack"
   ],
-  "author": "关注公众号素燕，系统学前端",
+  "author": "Kamesas",
   "license": "ISC",
   "devDependencies": {
     "html-webpack-plugin": "^4.3.0",
