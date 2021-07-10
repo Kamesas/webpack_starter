@@ -2,12 +2,20 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const pageData = {
+    works: {
+        template: './works.html',
+        title: 'Workssss Title',
+        heading: 'Workssss Heading',
+        content: 'Workssss content lorem lorem'
+    },
     work1: {
+        template: './work.tpl.html',
         title: 'Work1 Title',
         heading: 'Work1 Heading',
         content: 'Work1 content lorem lorem'
     },
     work2: {
+        template: './work.tpl.html',
         title: 'Work2 Title',
         heading: 'Work2 Heading',
         content: 'Work2 content lorem'
@@ -26,7 +34,7 @@ const plugins = [];
     keys.map(key => {
         let htmlPlugin = new HtmlWebpackPlugin({
             title: `${pageData[key].title}`,
-            template: './index.tpl.html',
+            template: `${pageData[key].template}`,
             templateParameters: {
                 'heading': `${pageData[key].heading}`,
                 'content': `${pageData[key].content}`
