@@ -2,27 +2,27 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const pageData = {
-    home: {
-        title: 'Home Title',
-        heading: 'Home Heading',
-        content: 'Home content lorem lorem'
+    work1: {
+        title: 'Work1 Title',
+        heading: 'Work1 Heading',
+        content: 'Work1 content lorem lorem'
     },
-    topic: {
-        title: 'Topic Title',
-        heading: 'Topic Heading',
-        content: 'Topic content lorem'
-    }
+    work2: {
+        title: 'Work2 Title',
+        heading: 'Work2 Heading',
+        content: 'Work2 content lorem'
+    },
 }
 
-const entry = {
-    home: './home/index.js',
-    topic: './topic/index.js'
-};
+// const entry = {
+//     home: './home/index.js',
+//     topic: './topic/index.js'
+// };
 
 const plugins = [];
 
 !(function(){
-    let keys = Object.keys(entry);
+    let keys = Object.keys(pageData);
     keys.map(key => {
         let htmlPlugin = new HtmlWebpackPlugin({
             title: `${pageData[key].title}`,
@@ -31,7 +31,7 @@ const plugins = [];
                 'heading': `${pageData[key].heading}`,
                 'content': `${pageData[key].content}`
             },
-            chunks: [key],
+            // chunks: [key],
             filename: `${key}.html`,
             meta: {
                 charset: { charset: 'utf-8' },
@@ -50,7 +50,8 @@ const plugins = [];
 
 module.exports = {
     mode: 'development',
-    entry: entry,
+    entry: './index.js',
+    // entry: entry,
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, './dist')
@@ -58,18 +59,3 @@ module.exports = {
     plugins: plugins
 }
 
-// new HtmlWebpackPlugin({
-//     title: '和素燕一起学 webpack',
-//     filename: 'index.html',
-//     minify: {
-//         removeComments: true,
-//         // collapseWhitespace: true
-//     },
-//     meta: {
-//         charset: { charset: 'utf-8' },
-//         viewport: 'width=device-width, initial-scale=1'
-//     },
-//     // 控制 script 标签插入的位置
-//     inject: "head",
-//     favicon: 'favicon.png',
-// }),

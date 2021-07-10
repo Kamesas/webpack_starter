@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./home/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./home/index.js":
-/*!***********************!*\
-  !*** ./home/index.js ***!
-  \***********************/
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("; (function () {\n    let pEle = document.createElement('p');\n    pEle.innerText = 'home：Home paragraph';\n    console.log(pEle);\n    let parEle = document.getElementById('content-id');\n    console.log(parEle);\n    parEle.appendChild(pEle);\n})();\n\n//# sourceURL=webpack:///./home/index.js?");
+eval("console.log(\"common.js\");\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 
