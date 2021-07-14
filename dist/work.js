@@ -81,31 +81,31 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./pages/main/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./pages/work/work.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./pages/main/main.js":
+/***/ "./pages/work/work.js":
 /*!****************************!*\
-  !*** ./pages/main/main.js ***!
+  !*** ./pages/work/work.js ***!
   \****************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./pages/main/main.scss\");\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\nconsole.log(\"main.js included\");\n\n//# sourceURL=webpack:///./pages/main/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _work_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./work.scss */ \"./pages/work/work.scss\");\n/* harmony import */ var _work_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_work_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./pages/work/work.js?");
 
 /***/ }),
 
-/***/ "./pages/main/main.scss":
+/***/ "./pages/work/work.scss":
 /*!******************************!*\
-  !*** ./pages/main/main.scss ***!
+  !*** ./pages/work/work.scss ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./pages/main/main.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./pages/work/work.scss?");
 
 /***/ })
 

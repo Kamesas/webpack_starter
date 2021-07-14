@@ -1,0 +1,62 @@
+{
+  "main": {
+    "template": "./src/html/main.html",
+    "meta": [
+      {
+        "name": "test-name",
+        "value": "test value"
+      }
+    ],
+    "title": "test title main"
+},
+  "career": {
+    "template": "./src/html/career.html",
+    "meta": [
+      {
+        "name": "test-name-career",
+        "value": "test value"
+      }
+    ],
+    "title": "test title career"
+  },
+  "projects": {
+    "template": "./src/html/projects.html",
+    "meta": [
+      {
+        "name": "test-name-projects",
+        "value": "test value"
+      }
+    ],
+    "title": "test title projects"
+  },
+  "ocean_cruises": {
+    "template": "./src/html/project.tpl.html",
+    "meta": [
+      {
+        "name": "test-name-ocean",
+        "value": "test value"
+      }
+    ],
+    "title": "test title ocean"
+  },
+  "secure-document-management": {
+    "template": "./src/html/project.tpl.html",
+    "meta": [
+      {
+        "name": "test-name-secure",
+        "value": "test value secure"
+      }
+    ],
+    "title": "test title secure"
+  },
+  "crm": {
+    "template": "./src/html/project.tpl.html",
+    "meta": [
+      {
+        "name": "test-name-crm",
+        "value": "test value crm"
+      }
+    ],
+    "title": "test title crm"
+  }
+}
