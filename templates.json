@@ -1,62 +1,74 @@
 {
   "main": {
-    "template": "./src/html/main.html",
+    "template": "./src/html/main/main.html",
     "meta": [
       {
         "name": "test-name",
         "value": "test value"
       }
     ],
-    "title": "test title main"
+    "title": "test title main",
+    "chunk": "main"
 },
   "career": {
-    "template": "./src/html/career.html",
+    "template": "./src/html/career/career.html",
     "meta": [
       {
         "name": "test-name-career",
         "value": "test value"
       }
     ],
-    "title": "test title career"
+    "title": "test title career",
+    "chunk": "career"
   },
   "projects": {
-    "template": "./src/html/projects.html",
+    "template": "./src/html/projects/projects.html",
     "meta": [
       {
         "name": "test-name-projects",
         "value": "test value"
       }
     ],
-    "title": "test title projects"
+    "title": "test title projects",
+    "chunk": "projects"
   },
   "ocean_cruises": {
-    "template": "./src/html/project.tpl.html",
+    "template": "./src/html/project/project.tpl.html",
     "meta": [
       {
         "name": "test-name-ocean",
         "value": "test value"
       }
     ],
-    "title": "test title ocean"
+    "title": "test title ocean",
+    "chunk": "projects",
+    "heading": "ocean_cruises Heading",
+    "content": "ocean_cruises content lorem lorem",
   },
   "secure-document-management": {
-    "template": "./src/html/project.tpl.html",
+    "template": "./src/html/project/project.tpl.html",
     "meta": [
       {
         "name": "test-name-secure",
         "value": "test value secure"
       }
     ],
-    "title": "test title secure"
+    "title": "test title secure",
+    "chunk": "projects",
+    "heading": "secure-document-management Heading",
+    "content": "secure-document-management content lorem lorem",
   },
   "crm": {
-    "template": "./src/html/project.tpl.html",
+    "template": "./src/html/project/project.tpl.html",
     "meta": [
       {
         "name": "test-name-crm",
         "value": "test value crm"
       }
     ],
-    "title": "test title crm"
+    "title": "test title crm",
+    "chunk": "projects",
+    "heading": "crm Heading",
+    "content": "crm content lorem lorem"
   }
 }

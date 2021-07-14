@@ -81,31 +81,31 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./pages/works/works.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/html/project/project.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./pages/works/works.js":
-/*!******************************!*\
-  !*** ./pages/works/works.js ***!
-  \******************************/
+/***/ "./src/html/project/project.js":
+/*!*************************************!*\
+  !*** ./src/html/project/project.js ***!
+  \*************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _works_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./works.scss */ \"./pages/works/works.scss\");\n/* harmony import */ var _works_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_works_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./pages/works/works.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _project_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project.scss */ \"./src/html/project/project.scss\");\n/* harmony import */ var _project_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_project_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./src/html/project/project.js?");
 
 /***/ }),
 
-/***/ "./pages/works/works.scss":
-/*!********************************!*\
-  !*** ./pages/works/works.scss ***!
-  \********************************/
+/***/ "./src/html/project/project.scss":
+/*!***************************************!*\
+  !*** ./src/html/project/project.scss ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./pages/works/works.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/html/project/project.scss?");
 
 /***/ })
 

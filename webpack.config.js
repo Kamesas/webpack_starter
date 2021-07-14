@@ -3,34 +3,80 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const pageData = {
-    main: {
-        template: './pages/main/main.html',
-        title: 'Main Title',
-        heading: 'Main Heading',
-        content: 'Main content lorem lorem',
-        chunk: 'main'
-    },
-    works: {
-        template: './pages/works/works.html',
-        title: 'Workssss Title',
-        heading: 'Workssss Heading',
-        content: 'Workssss content lorem lorem',
-        chunk: 'works'
-    },
-    work1: {
-        template: './pages/work/work.tpl.html',
-        title: 'Work1 Title',
-        heading: 'Work1 Heading',
-        content: 'Work1 content lorem lorem',
-        chunk: 'work'
-    },
-    // work2: {
-    //     template: './pages/work.tpl.html',
-    //     title: 'Work2 Title',
-    //     heading: 'Work2 Heading',
-    //     content: 'Work2 content lorem'
-    // },
+  "main": {
+    "template": "./src/html/main/main.html",
+    "meta": [
+      {
+        "name": "test-name",
+        "value": "test value"
+      }
+    ],
+    "title": "test title main",
+    "chunk": "main"
+},
+  "career": {
+    "template": "./src/html/career/career.html",
+    "meta": [
+      {
+        "name": "test-name-career",
+        "value": "test value"
+      }
+    ],
+    "title": "test title career",
+    "chunk": "career"
+  },
+  "projects": {
+    "template": "./src/html/projects/projects.html",
+    "meta": [
+      {
+        "name": "test-name-projects",
+        "value": "test value"
+      }
+    ],
+    "title": "test title projects",
+    "chunk": "projects"
+  },
+  "ocean_cruises": {
+    "template": "./src/html/project/project.tpl.html",
+    "meta": [
+      {
+        "name": "test-name-ocean",
+        "value": "test value"
+      }
+    ],
+    "title": "test title ocean",
+    "chunk": "project",
+    "heading": "ocean_cruises Heading",
+    "content": "ocean_cruises content lorem lorem",
+  },
+  "secure-document-management": {
+    "template": "./src/html/project/project.tpl.html",
+    "meta": [
+      {
+        "name": "test-name-secure",
+        "value": "test value secure"
+      }
+    ],
+    "title": "test title secure",
+    "chunk": "project",
+    "heading": "secure-document-management Heading",
+    "content": "secure-document-management content lorem lorem",
+  },
+  "crm": {
+    "template": "./src/html/project/project.tpl.html",
+    "meta": [
+      {
+        "name": "test-name-crm",
+        "value": "test value crm"
+      }
+    ],
+    "title": "test title crm",
+    "chunk": "project",
+    "heading": "crm Heading",
+    "content": "crm content lorem lorem"
+  }
 }
+
 const plugins = [];
 
 !(function(){
@@ -71,9 +117,10 @@ module.exports = {
     },
     entry: {
         index: './index.js',
-        main: './pages/main/main.js',
-        works: './pages/works/works.js',
-        work: './pages/work/work.js',
+        main: './src/html/main/main.js',
+        career: './src/html/career/career.js',
+        projects: './src/html/projects/projects.js',
+        project: './src/html/project/project.js'
     },
     output: {
         filename: '[name].js',
@@ -98,102 +145,3 @@ module.exports = {
       new MiniCssExtractPlugin(),
     ],
 }
-
-/*
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
-const PATHS = {
-  src: path.join(__dirname, "../src"),
-  dist: path.join(__dirname, "../public"),
-  assets: "assets/"
-};
-module.exports = {
-  // BASE config
-  externals: {
-    paths: PATHS
-  },
-  entry: {
-    app: PATHS.src
-  },
-  output: {
-      filename: '[name].js',
-      path: path.resolve(__dirname, './dist')
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        loader: "babel-loader",
-        exclude: "/node_modules/"
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: "file-loader",
-        options: {
-          name: "[name].[ext]"
-        }
-      },
-      {
-        test: /\.(sc|sa)ss$/,
-        use: [
-          "style-loader",
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: { sourceMap: true }
-          },
-          {
-            loader: "postcss-loader",
-            options: {
-              sourceMap: true,
-              config: { path: `${PATHS.src}/js/postcss.config.js` }
-            }
-          },
-          {
-            loader: "sass-loader",
-            options: { sourceMap: true }
-          }
-        ]
-      },
-      {
-        test: /\.css$/,
-        use: [
-          "style-loader",
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: { sourceMap: true }
-          },
-          {
-            loader: "postcss-loader",
-            options: {
-              sourceMap: true,
-              config: { path: `${PATHS.src}/js/postcss.config.js` }
-            }
-          }
-        ]
-      }
-    ]
-  },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].css`
-    }),
-    ...plugins,
-    // new HtmlWebpackPlugin({
-    //   hash: false,
-    //   template: `${PATHS.src}/index.html`,
-    //   filename: "./index.html"
-    // }),
-    new CopyWebpackPlugin([
-      { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/static`, to: "" }
-    ]),
-  ]
-};
-
-*/
-

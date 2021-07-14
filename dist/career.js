@@ -81,31 +81,31 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/html/main/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/html/career/career.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/html/main/main.js":
-/*!*******************************!*\
-  !*** ./src/html/main/main.js ***!
-  \*******************************/
+/***/ "./src/html/career/career.js":
+/*!***********************************!*\
+  !*** ./src/html/career/career.js ***!
+  \***********************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/html/main/main.scss\");\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\nconsole.log(\"main.js included\");\n\n//# sourceURL=webpack:///./src/html/main/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _career_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./career.scss */ \"./src/html/career/career.scss\");\n/* harmony import */ var _career_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_career_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./src/html/career/career.js?");
 
 /***/ }),
 
-/***/ "./src/html/main/main.scss":
-/*!*********************************!*\
-  !*** ./src/html/main/main.scss ***!
-  \*********************************/
+/***/ "./src/html/career/career.scss":
+/*!*************************************!*\
+  !*** ./src/html/career/career.scss ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/html/main/main.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/html/career/career.scss?");
 
 /***/ })
 
