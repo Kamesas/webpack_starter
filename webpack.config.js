@@ -2,6 +2,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const pageData = {
   "main": {
@@ -139,11 +140,26 @@ module.exports = {
             "sass-loader",
           ],
         },
+        {
+          test: /\.js$/,
+          loader: "babel-loader",
+          exclude: "/node_modules/"
+        },
+        {
+          test: /\.(png|jpg|gif|svg)$/,
+          loader: "file-loader",
+          options: {
+            name: "[name].[ext]"
+          }
+        },
       ]
     },
     plugins: [
       ...plugins,
       new MiniCssExtractPlugin(),
-      new CleanWebpackPlugin()
+      new CleanWebpackPlugin(),
+      new CopyWebpackPlugin([
+        { from: './src/assets', to: `./assets` },
+      ])
     ],
 }

@@ -1,4 +1,10 @@
+@import "../../assets/styles/_variables.scss";
+
 .main {
   color: brown;
   text-transform: uppercase;
+  background-image: url('../../assets/images/pexels-flickr-145939.jpg');
+  background-position: center;
+  min-height: 600px;
+  color: $test;
 }
