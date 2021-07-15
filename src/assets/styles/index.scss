@@ -1,5 +1,77 @@
+@import "variables";
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+html,
+body {
+  height: 100%;
+
+}
+
+body {
+  @extend %regularFont;
+  font-size: 18px;
+  color: $TEXT_DARK;
+  touch-action: pan-y;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5
+{
+  @extend %boldFont;
+  font-weight: normal;
+}
+
+a {
+  cursor: pointer;
+  color: $blue_4;
+  text-decoration: none;
+}
+
+button,
+a {
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.container {
+  max-width: 1680px;
+  margin: auto;
+}
+
+#root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.App {
+  &-mainContainer {
+    flex: 1 1 50%;
+  }
+}
+
+.checkerboard-order {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  &:nth-child(odd){
+    flex-direction: row-reverse;
+  }
+}
+
+
 

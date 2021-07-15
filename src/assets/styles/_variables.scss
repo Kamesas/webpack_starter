@@ -4,6 +4,14 @@
   letter-spacing: 0.05em;
 }
 
+%regularFont {
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 $white: #fff;
 
 $BLACK: #4b4b4b;
@@ -24,3 +32,5 @@ $bg_burger: $blue_1;
 $shadowHeaderBottom: 0 3px 5px 0 $black_2;
 $boxShadow_navBar: -7px 7px 10px 0 rgba(0, 0, 0, 0.14);
 $bg_menu_item: $blue_5;
+
+$TEXT_DARK: #53545a;
