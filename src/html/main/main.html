@@ -8,65 +8,12 @@
   </head>
 
   <body>
+    ${require('../common/header.html')}
 
-    <header class="header">
-      <a aria-current="page" class="header-logo active" href="/">
-        <img src="assets/images/logo.svg" alt="Atlana logo" class="header-logo-image">
-      </a>
-
-      <nav class="header-menu">
-        <input type="checkbox" id="burgerController" class="header-menuController">
-        <label for="burgerController" class="header-burgerMenu-icon"><span></span></label>
-        <label for="burgerController" class="header-menu-list-backdrop"></label>
-
-        <ul class="header-menu-list">
-          <label for="burgerController" class="burger-burgerClose-icon"></label>
-
-          <li class="header-menu-list-item">
-            <a
-              class="header-menu-list-item-link active"
-              data-content="Main"
-              href="/"
-              aria-current="page"
-              >
-              <span class="frontLayer" data-content="Main"></span>
-              <span class="backLayer">Main</span></a
-            >
-          </li>
-          <li class="header-menu-list-item">
-            <a
-              class="header-menu-list-item-link"
-              data-content="Works"
-              href="/projects.html"
-              >
-              <span class="frontLayer" data-content="Works"></span>
-              <span class="backLayer">Works</span></a
-            >
-          </li>
-          <li class="header-menu-list-item">
-            <a
-              class="header-menu-list-item-link"
-              data-content="Career"
-              href="./career.html"
-              >
-              <span class="frontLayer" data-content="Career"></span>
-              <span class="backLayer">Career</span></a
-            >
-          </li>
-
-          <li class="header-menu-list-item">
-            <button class="header-menu-list-item-link contact">
-              <span class="frontLayer" data-content="Contact us"></span>
-              <span class="backLayer">Contact us</span>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
+   
     <section class="MainPgeHB">
       <div class="bgImageWrapper">
-        <img src="assets/images/world_map_blue.svg" alt="world map" class="world_map">
+        <img src="../../assets/images/world_map_blue.svg" alt="world map" class="world_map">
       </div>
 
       <h1 class="MainPgeHB-title">

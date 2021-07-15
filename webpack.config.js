@@ -97,7 +97,8 @@ const plugins = [];
                 charset: { charset: 'utf-8' },
                 viewport: 'width=device-width, initial-scale=1'
             },
-            inject: "body",
+            // inject: "body",
+            inject: true,
             favicon: 'favicon.png',
             // minify: {
             //     removeComments: true,
@@ -152,6 +153,16 @@ module.exports = {
             name: "[name].[ext]"
           }
         },
+        { test: /\.html$/, use: ['html-loader?interpolate'] },
+        // {
+        //   test: /\.html$/i,
+        //   loader: 'html-loader',
+        // }
+        // {
+        //   test: /\.html$/,
+        //   include: path.resolve(__dirname, 'src/html'),
+        //   use: ['html-loader?interpolate']
+        // },
       ]
     },
     plugins: [
