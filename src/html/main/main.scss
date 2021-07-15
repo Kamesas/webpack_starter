@@ -1,10 +1,167 @@
 @import "../../assets/styles/_variables.scss";
 
-.main {
-  color: brown;
-  text-transform: uppercase;
-  background-image: url('../../assets/images/pexels-flickr-145939.jpg');
-  background-position: center;
-  min-height: 600px;
-  color: $test;
+@import './header';
+
+$hbbg: linear-gradient(to top, $blue_2, $blue_3);
+$bgContrast: $orange;
+
+.MainPgeHB {
+  background-image: $hbbg;
+  height: 100vh;
+  color: $white;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+
+  .bgImageWrapper {
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    height: 105vh;
+    top: 65px;
+
+    .world_map {
+      position: absolute;
+      width: 100%;
+      left: 50%;
+      top: 50%;
+      filter: drop-shadow(4px 4px 7px $blue_7);
+      transform: translate(-50%, -50%);
+      min-width: 1920px;
+    }
+  }
+
+  &-wave {
+    width: 100%;
+    top: 100%;
+    z-index: -1;
+    bottom: 0;
+    top: initial;
+  }
+
+  &-title {
+    @extend %boldFont;
+    font-size: 10vw;
+    text-shadow: 7px 7px 10px rgba(0, 0, 0, 0.14);
+    position: absolute;
+    left: 0;
+    top: 17%;
+    padding: 0.25em;
+    z-index: 1;
+
+    &-line {
+      display: block;
+      overflow: hidden;
+      margin-left: .3em;
+
+      &-text {
+        display: block;
+        transform: translate3d(0, 100%, 0);
+        text-transform: uppercase;
+        transition: transform 0.5s ease;
+
+        &.show {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
+  }
+
+  &-mainText {
+    padding: .5em 1.5em;
+    font-size: 1.8em;
+    z-index: 2;
+    position: absolute;
+    left: 60%;
+    top: 20%;
+    max-width: 550px;
+    text-shadow: 7px 7px 10px rgba(0, 0, 0, 0.14);
+
+    &-addition {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      color: #ffcb37;
+      border-right: 0.4em solid $bgContrast;
+      font-size: 1.15em;
+      animation-duration: 1s;
+      animation-name: blinkTextCursor;
+      animation-iteration-count: infinite;
+
+      &.typing {
+        animation-name: initial;
+      }
+    }
+
+    @keyframes blinkTextCursor {
+      0% {
+        border-right-color: transparent;
+      }
+      100% {
+        border-right-color: $bgContrast;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .bgImageWrapper .world_map {
+      left: 65%;
+      top: 35%;
+    }
+  }
+
+  @media screen and (max-width: 940px) {
+    margin-bottom: 10rem;
+    padding-top: 4em;
+
+    &-title {
+      font-size: 12vw;
+      text-align: center;
+      width: 100%;
+      top: 10%;
+    }
+
+    &-mainText {
+      font-size: 1.15em;
+      text-align: center;
+      position: relative;
+      width: 100%;
+      top: 47vh;
+      left: initial;
+      max-width: initial;
+      margin: 0 auto;
+    }
+
+    .bgImageWrapper {
+      top: 50px;
+
+      .world_map {
+        left: 75%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .bgImageWrapper {
+      height: 120vh;
+
+      .world_map {
+        left: 75%;
+      }
+    }
+    &-mainText {
+      top: 35vh;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .bgImageWrapper .world_map {
+      left: 115%;
+    }
+
+    &-title {
+      top: 20%;
+    }
+    //height: 75vh;
+  }
 }

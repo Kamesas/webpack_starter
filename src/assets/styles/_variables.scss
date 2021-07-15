@@ -1,1 +1,26 @@
-$test: green;
+%boldFont{
+  font-family: "Heavitas";
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+$white: #fff;
+
+$BLACK: #4b4b4b;
+$black_2: rgba(0, 0, 0, 0.15);
+
+$blue_1: #1d3d68;
+$blue_2: #0071bc;
+$blue_3: #0a7ac4;
+$blue_4: #1080cf;
+$blue_5: #34a0eb;
+
+$blue_7: #0663bb;
+
+$orange: #fbaf3d;
+
+
+$bg_burger: $blue_1;
+$shadowHeaderBottom: 0 3px 5px 0 $black_2;
+$boxShadow_navBar: -7px 7px 10px 0 rgba(0, 0, 0, 0.14);
+$bg_menu_item: $blue_5;

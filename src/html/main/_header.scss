@@ -1,0 +1,265 @@
+%menuIcon {
+  width: 100%;
+  height: 0.2em;
+  background: $bg_burger;
+  border-radius: 0.5em;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1.5em;
+  top: 0;
+  max-height: 65px;
+  z-index: 9999;
+  background-color: $white;
+  box-shadow: $shadowHeaderBottom;
+
+  .showedMobileMenu {
+    font-size: 1.5em !important;
+  }
+
+  &,
+  &:after {
+    width: 100%;
+  }
+
+  &-logo {
+    position: relative;
+    z-index: 9999;
+
+    &-image {
+      height: 2em;
+      transition: width 0.3s 0.3s ease, padding-top 0.3s 0.3s ease;
+
+      @media screen and (max-width: 919px){
+        height: 1.25em;
+      }
+    }
+  }
+
+  /* Button menu */
+  &-burgerMenu-icon {
+    display: none;
+
+    @media screen and (max-width: 919px) {
+      display: flex;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .header-menuController:focus ~ &-burgerMenu-icon,
+  .header-menuController:focus ~ &-burgerClose-icon {
+    box-shadow: 0 0 5px 0 royalblue;
+  }
+
+  &-menuController {
+    position: fixed;
+    right: -100%;
+
+    & ~ .header-burgerMenu-icon {
+      cursor: pointer;
+      height: 1.35em;
+      width: 2em;
+      z-index: 5;
+      flex-wrap: wrap;
+      align-items: center;
+
+      span,
+      &:before,
+      &:after {
+        @extend %menuIcon;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+      }
+    }
+
+    &:checked {
+      & ~ .header-menu-list-backdrop {
+        transition: transform 0.2s ease;
+        transform: translate3d(0, 0, 0);
+      }
+
+      & + .header-burgerMenu-icon {
+        display: none;
+      }
+
+      & ~ .header-menu-list .burger-burgerClose-icon {
+        display: block;
+      }
+
+      & ~ .header-menu-list {
+        transform: translateX(-100%);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  /* Menu */
+  &-menu {
+    position: relative;
+    z-index: 9999;
+
+    .burger-burgerClose-icon {
+      display: none;
+      position: absolute;
+      cursor: pointer;
+      top: 1em;
+      right: 2em;
+      height: 2.5em;
+      width: 2.5em;
+      z-index: 5;
+      flex-wrap: wrap;
+      align-items: center;
+
+      &:before,
+      &:after {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        @extend %menuIcon;
+        content: "";
+      }
+
+      &:before {
+        transform:  translate(-50%, -50%) rotate(45deg);
+      }
+
+      &:after {
+        transform:  translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+
+    &-list {
+      padding-top: .5em;
+
+      &-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.8;
+        background-color: $BLACK;
+        z-index: 2;
+        transform: translate3d(-100%, 0, 0);
+        transition: transform 0.2s ease;
+      }
+
+      @media screen and (max-width: 919px) {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $white;
+        box-shadow: $boxShadow_navBar;
+        top: 0;
+        left: 100%;
+        bottom: 0;
+        padding: 1em;
+        max-width: 40vw;
+        min-width: 250px;
+        transition: transform 0.3s ease;
+        z-index: 3;
+      }
+
+      &-item {
+        display: inline-block;
+        margin: 0 0.5em;
+        position: relative;
+        overflow: hidden;
+        font-weight: 800;
+        transition: font-size 0.3s 0.3s ease;
+        white-space: nowrap;
+
+        &-link {
+          display: block;
+          padding: 0.5em 0;
+          transition: font-size 0.3s 0.3s ease;
+          font-size: .9em;
+
+          .backLayer {
+            padding: 0 0.75em;
+            display: block;
+          }
+
+          .backLayer,
+          .frontLayer:before {
+            display: block;
+          }
+
+          .frontLayer {
+            overflow: hidden;
+            height: 100%;
+            background-color: $bg_menu_item;
+            width: 0;
+            transition: width 0.5s ease;
+
+            &,
+            &:before {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+            }
+
+            &:before {
+              content: attr(data-content);
+              margin: 0em 0.75em;
+              position: absolute;
+              color: $white;
+              text-shadow: 2px 2px 5px rgba(0,0,0,.3);
+            }
+          }
+
+          &.active .frontLayer {
+            width: .55em;
+          }
+
+          &:hover .frontLayer {
+            width: 100%;
+          }
+
+          @media screen and (max-width: 919px) {
+            font-size: 1.75em;
+            transform: translateY(100%);
+            transition: transform 0.3s; //do not delete !!!
+          }
+
+          &.contact {
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            background-color: transparent;
+            color: $blue_4;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 919px) {
+      &Controller:checked ~ &-list &-list-item {
+        @for $i from 1 through 10 {
+          &:nth-child(#{$i}) .header-menu-list-item-link {
+            transition-delay: #{(($i - 1) * 0.1) + 0.2s};
+          }
+        }
+
+        &-link {
+          transform: translateY(0%);
+        }
+      }
+    }
+  }
+}

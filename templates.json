@@ -41,7 +41,7 @@
       }
     ],
     "title": "test title ocean",
-    "chunk": "projects",
+    "chunk": "project",
     "heading": "ocean_cruises Heading",
     "content": "ocean_cruises content lorem lorem",
   },
@@ -54,7 +54,7 @@
       }
     ],
     "title": "test title secure",
-    "chunk": "projects",
+    "chunk": "project",
     "heading": "secure-document-management Heading",
     "content": "secure-document-management content lorem lorem",
   },
@@ -67,7 +67,7 @@
       }
     ],
     "title": "test title crm",
-    "chunk": "projects",
+    "chunk": "project",
     "heading": "crm Heading",
     "content": "crm content lorem lorem"
   }

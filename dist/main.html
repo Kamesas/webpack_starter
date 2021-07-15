@@ -1,15 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>test title main</title>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="favicon.png"><link href="index.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
-<body>
-  <div class="main">Main style</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test title main</title>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="favicon.png"><link href="index.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
 
-  <img src="assets/images/pexels-flickr-145939.jpg" width="400" alt="bests">
-  <img src="assets/images/pexels-nout-gons-378570.jpg" width="400" alt="bests">
-<script src="index.js"></script><script src="main.js"></script></body>
+  <body>
+    <header class="header">
+      <a aria-current="page" class="header-logo active" href="/">
+        <img src="/static/media/logo.e8263613.svg" alt="Atlana logo" class="header-logo-image">
+      </a>
+
+      <nav class="header-menu">
+        <input type="checkbox" id="burgerController" class="header-menuController">
+        <label for="burgerController" class="header-burgerMenu-icon"><span></span></label>
+        <label for="burgerController" class="header-menu-list-backdrop"></label>
+
+        <ul class="header-menu-list">
+          <label for="burgerController" class="burger-burgerClose-icon"></label>
+
+          <li class="header-menu-list-item">
+            <a
+              class="header-menu-list-item-link active"
+              data-content="Main"
+              href="/"
+              aria-current="page"
+              >
+              <span class="frontLayer" data-content="Main"></span>
+              <span class="backLayer">Main</span></a
+            >
+          </li>
+          <li class="header-menu-list-item">
+            <a
+              class="header-menu-list-item-link"
+              data-content="Works"
+              href="/projects.html"
+              >
+              <span class="frontLayer" data-content="Works"></span>
+              <span class="backLayer">Works</span></a
+            >
+          </li>
+          <li class="header-menu-list-item">
+            <a
+              class="header-menu-list-item-link"
+              data-content="Career"
+              href="./career.html"
+              >
+              <span class="frontLayer" data-content="Career"></span>
+              <span class="backLayer">Career</span></a
+            >
+          </li>
+
+          <li class="header-menu-list-item">
+            <button class="header-menu-list-item-link contact">
+              <span class="frontLayer" data-content="Contact us"></span>
+              <span class="backLayer">Contact us</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="MainPgeHB">
+      <div class="bgImageWrapper">
+        <img src="/static/media/world_map_blue.8f5697c9.svg" alt="world map" class="world_map">
+      </div>
+
+      <h1 class="MainPgeHB-title">
+        <span class="MainPgeHB-title-line">
+          <span class="MainPgeHB-title-line-text show">We</span>
+        </span>
+        <span class="MainPgeHB-title-line">
+          <span class="MainPgeHB-title-line-text show">build</span>
+        </span>
+        <span class="MainPgeHB-title-line">
+          <span class="MainPgeHB-title-line-text show">digital</span>
+        </span>
+      </h1>
+
+      <div class="MainPgeHB-mainText">
+        <span>We help companies around the world to</span>
+        <br>
+        <span class="MainPgeHB-mainText-addition">to feel comfortable online</span>
+      </div>
+
+      <div class="WhiteWave  MainPgeHB-wave">
+        <div class="wave "></div>
+      </div>
+
+      <span id="about"></span>
+    </section>
+  <script src="index.js"></script><script src="main.js"></script></body>
 </html>
